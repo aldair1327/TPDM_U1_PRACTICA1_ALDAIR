@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="30dp"
+    android:background="#000000"
+    android:id="@+id/fondo"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre: "
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:id="@+id/nombre"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:ems="7"
+        android:layout_toRightOf="@id/nombre"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/texto"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/texto"
+        android:layout_marginTop="30dp"
+        android:text="Hi"
+        android:id="@+id/boton"
+        android:onClick="mensajeHola"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nombre"
+        android:padding="20dp"
+        android:id="@+id/colores"
+        >
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF0000"
+            android:textColor="#FFFFFF"
+            android:text="Rojo"
+            android:textSize="20dp"
+            android:id="@+id/rojo"
+            android:onClick="red"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/azul"
+            android:text="Azul"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:background="#0000FF"
+            android:onClick="blue"
+            />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/verde"
+            android:text="Verde"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:background="#00FF00"
+            android:onClick="green"
+            />
+
+
+
+    </RadioGroup>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="Ocultar Colores"
+        android:textSize="20dp"
+        android:layout_below="@id/colores"
+        android:id="@+id/ocultar"
+        android:layout_centerHorizontal="true"
+        android:onClick="hide"
+        />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/cuentas"
+        android:background="#FFFFFF"
+        android:layout_below="@id/ocultar"
+        android:padding="10dp"
+        android:id="@+id/operacion"
+
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:ems="3"
+        android:layout_below="@id/operacion"
+        android:layout_marginTop="20dp"
+        android:id="@+id/a"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/a"
+        android:layout_below="@id/operacion"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="#FFFFFF"
+
+        android:textSize="20dp"
+        android:id="@+id/operador"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:ems="3"
+        android:layout_below="@id/operacion"
+        android:layout_toRightOf="@id/a"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="65dp"
+        android:id="@+id/b"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/b"
+        android:layout_below="@id/operacion"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#FFFFFF"
+        android:text="="
+        android:textSize="20dp"
+        android:id="@+id/igual"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/igual"
+        android:layout_below="@id/operacion"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#FFFFFF"
+        android:text="0"
+        android:textSize="20dp"
+        android:id="@+id/resultado"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/operacion"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:text="Realizar"
+        android:id="@+id/realizar"
+        android:onClick="calcular"
+        />
+
+
+
+</RelativeLayout>

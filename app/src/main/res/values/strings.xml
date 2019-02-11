@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">TPDM_U1_Practica1_AldairArriola</string>
+    <string-array name="cuentas">
+        <item>Suma</item>
+        <item>Resta</item>
+        <item>Multiplicacion</item>
+        <item>Division</item>
+
+    </string-array>
+</resources>

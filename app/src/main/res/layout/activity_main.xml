@@ -97,12 +97,24 @@
         android:layout_centerHorizontal="true"
         android:onClick="hide"
         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ocultar"
+        android:id="@+id/instr"
+        android:text="Seleccione una operacion y escriba un numero en cada espacio"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        />
+
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/cuentas"
         android:background="#FFFFFF"
-        android:layout_below="@id/ocultar"
+        android:layout_below="@id/instr"
         android:padding="10dp"
         android:id="@+id/operacion"
 
@@ -116,6 +128,7 @@
         android:layout_below="@id/operacion"
         android:layout_marginTop="20dp"
         android:id="@+id/a"
+        android:inputType="number"
         />
 
     <TextView
@@ -141,6 +154,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="65dp"
         android:id="@+id/b"
+        android:inputType="number"
         />
 
     <TextView
